@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridPrefab: {fileID: 1720440690769911165, guid: 437a8fd01eb918244b1fb83214a1d5bc, type: 3}
   initialPos: {x: 2, y: 0, z: 0}
+  gridCoord: 0
+  parentName: Hexagonal Grid
   width: 5
   height: 5
-  widthThreshold: 2
-  heightThreshold: 2
-  hexagonalThreshold: 1
+  widthOffset: 2
+  heightOffset: 2
+  hexagonalOffset: 1

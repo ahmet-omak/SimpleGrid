@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62624d07b8e700948951a26f322eb7dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridManager: {fileID: 799866916}
   gridSettings: {fileID: 11400000, guid: 092afbd45f600f24e828d8b6e13e9711, type: 2}
 --- !u!4 &1611607443
 Transform:
