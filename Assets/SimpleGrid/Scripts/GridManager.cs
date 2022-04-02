@@ -1,94 +1,39 @@
 using UnityEngine;
 
-public class GridManager : MonoBehaviour
+public class GridManager : BaseGridManager
 {
-    public void InitQuadralGrid(QuadralGridSettings gridSettings)
+    /// <summary>
+    /// Initialize grid according to the given grid settings
+    /// </summary>
+    /// <param name="gridSettings"></param>
+    public void InitGrid(BaseGridSettings gridSettings)
     {
-        if (gridSettings.GridCoords == GridCoords.XZPlane)
+        if (gridSettings.GetType() == typeof(HexagonalGridSettings))
         {
-            GenerateXZGrid(gridSettings);
-        }
-        else if (gridSettings.GridCoords == GridCoords.XYPlane)
-        {
-            GenerateXYGrid(gridSettings);
-        }
-    }
+            //Init hexagonal grid
 
-    public void InitHexagonalGrid(HexagonalGridSettings gridSettings)
-    {
-        var gridParent = new GameObject(gridSettings.ParentName);
-
-        int height = gridSettings.Height;
-        int width = gridSettings.Width;
-
-        float widthOffset = gridSettings.WidthOffset;
-        float heightOffset = gridSettings.HeightOffset;
-        float hexagonalOffset = gridSettings.HexagonalOffset;
-
-        Vector3 initialPos = gridSettings.InitialPos;
-
-        GameObject gridPrefab = gridSettings.GridPrefab;
-
-        for (int z = 0; z < height; z++)
-        {
-            for (int x = 0; x < width; x++)
+            switch (gridSettings.GridCoords)
             {
-                Vector3 worldPos = initialPos + new Vector3(x * widthOffset + (z % 2 * hexagonalOffset), 0f, z * heightOffset);
-                Vector2 gridPos = new Vector2(x, z);
-                var gridObj = Instantiate(gridPrefab, worldPos, Quaternion.identity);
-                gridObj.transform.SetParent(gridParent.transform);
+                case GridCoords.XZPlane:
+                    GenerateHexagonalXZGrid((HexagonalGridSettings)gridSettings);
+                    break;
+                case GridCoords.XYPlane:
+                    GenerateHexagonalXYGrid((HexagonalGridSettings)gridSettings);
+                    break;
             }
         }
-    }
-
-    private void GenerateXZGrid(QuadralGridSettings gridSettings)
-    {
-        var gridParent = new GameObject(gridSettings.ParentName);
-
-        int height = gridSettings.Height;
-        int width = gridSettings.Width;
-
-        float widthOffset = gridSettings.WidthOffset;
-        float heightOffset = gridSettings.HeightOffset;
-
-        Vector3 initialPos = gridSettings.InitialPos;
-
-        GameObject gridPrefab = gridSettings.GridPrefab;
-
-        for (int z = 0; z < height; z++)
+        else if (gridSettings.GetType() == typeof(QuadralGridSettings))
         {
-            for (int x = 0; x < width; x++)
+            //Init quadral grid
+
+            switch (gridSettings.GridCoords)
             {
-                Vector3 worldPos = initialPos + new Vector3(x * widthOffset, 0f, z * heightOffset);
-                Vector2 gridPos = new Vector2(x, z);
-                var gridObj = Instantiate(gridPrefab, worldPos, Quaternion.identity);
-                gridObj.transform.SetParent(gridParent.transform);
-            }
-        }
-    }
-
-    private void GenerateXYGrid(QuadralGridSettings gridSettings)
-    {
-        var gridParent = new GameObject(gridSettings.ParentName);
-
-        int height = gridSettings.Height;
-        int width = gridSettings.Width;
-
-        float widthOffset = gridSettings.WidthOffset;
-        float heightOffset = gridSettings.HeightOffset;
-
-        Vector3 initialPos = gridSettings.InitialPos;
-
-        GameObject gridPrefab = gridSettings.GridPrefab;
-
-        for (int y = 0; y < height; y++)
-        {
-            for (int x = 0; x < width; x++)
-            {
-                Vector3 worldPos = initialPos + new Vector3(x * widthOffset, y * heightOffset, 0f);
-                Vector2 gridPos = new Vector2(x, y);
-                var gridObj = Instantiate(gridPrefab, worldPos, Quaternion.identity);
-                gridObj.transform.SetParent(gridParent.transform);
+                case GridCoords.XZPlane:
+                    GenerateQuadralXZGrid((QuadralGridSettings)gridSettings);
+                    break;
+                case GridCoords.XYPlane:
+                    GenerateQuadralXYGrid((QuadralGridSettings)gridSettings);
+                    break;
             }
         }
     }

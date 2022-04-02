@@ -3,10 +3,10 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public GridManager gridManager;
-    public QuadralGridSettings gridSettings;
+    public BaseGridSettings gridSettings;
 
     private void Start()
     {
-        gridManager.InitQuadralGrid(gridSettings);
+        gridManager.InitGrid(gridSettings);
     }
 }
