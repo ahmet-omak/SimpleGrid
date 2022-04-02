@@ -1,11 +1,25 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseGridManager : MonoBehaviour
+public class BaseGridManager : MonoBehaviour
 {
+    public List<Cell> cells;
+
+    private void Awake()
+    {
+        cells = new List<Cell>();
+    }
+
+    private void Start()
+    {
+        
+    }
+
     protected void GenerateHexagonalXZGrid(HexagonalGridSettings gridSettings)
     {
         var gridParent = new GameObject(gridSettings.ParentName);
 
+        uint index = 0;
         int height = gridSettings.Height;
         int width = gridSettings.Width;
 
@@ -25,6 +39,8 @@ public abstract class BaseGridManager : MonoBehaviour
                 Vector2 gridPos = new Vector2(x, z);
                 var gridObj = Instantiate(gridPrefab, worldPos, Quaternion.identity);
                 gridObj.transform.SetParent(gridParent.transform);
+                var cell = new Cell(worldPos, gridPos, index++);
+                cells.Add(cell);
             }
         }
     }
@@ -33,6 +49,7 @@ public abstract class BaseGridManager : MonoBehaviour
     {
         var gridParent = new GameObject(gridSettings.ParentName);
 
+        uint index = 0;
         int height = gridSettings.Height;
         int width = gridSettings.Width;
 
@@ -52,6 +69,8 @@ public abstract class BaseGridManager : MonoBehaviour
                 Vector2 gridPos = new Vector2(x, y);
                 var gridObj = Instantiate(gridPrefab, worldPos, Quaternion.identity);
                 gridObj.transform.SetParent(gridParent.transform);
+                var cell = new Cell(worldPos, gridPos, index++);
+                cells.Add(cell);
             }
         }
     }
@@ -60,6 +79,7 @@ public abstract class BaseGridManager : MonoBehaviour
     {
         var gridParent = new GameObject(gridSettings.ParentName);
 
+        uint index = 0;
         int height = gridSettings.Height;
         int width = gridSettings.Width;
 
@@ -78,6 +98,8 @@ public abstract class BaseGridManager : MonoBehaviour
                 Vector2 gridPos = new Vector2(x, y);
                 var gridObj = Instantiate(gridPrefab, worldPos, Quaternion.identity);
                 gridObj.transform.SetParent(gridParent.transform);
+                var cell = new Cell(worldPos, gridPos, index++);
+                cells.Add(cell);
             }
         }
     }
@@ -86,6 +108,7 @@ public abstract class BaseGridManager : MonoBehaviour
     {
         var gridParent = new GameObject(gridSettings.ParentName);
 
+        uint index = 0;
         int height = gridSettings.Height;
         int width = gridSettings.Width;
 
@@ -104,6 +127,8 @@ public abstract class BaseGridManager : MonoBehaviour
                 Vector2 gridPos = new Vector2(x, z);
                 var gridObj = Instantiate(gridPrefab, worldPos, Quaternion.identity);
                 gridObj.transform.SetParent(gridParent.transform);
+                var cell = new Cell(worldPos, gridPos, index++);
+                cells.Add(cell);
             }
         }
     }
