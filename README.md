@@ -78,15 +78,16 @@ https://user-images.githubusercontent.com/59537269/161432041-4ecd2c31-9065-41ee-
 ## Example 1
 
 ## Generate Grid Inside Simple Grid Object
+https://user-images.githubusercontent.com/59537269/161442913-5f24edf5-c316-4bfe-9671-4c1325b2f778.mp4
 
 
 
+## Example 2
 
 ## Generate Grid From Another MonoBehaviour
  - SimpleGrid allows you to initialize grid from another MonoBehaviour
  - For example, If you want to use different grids for your levels you can make a list of grid settings and attach different grid data for each level like below
 
-## Example 2
 ```csharp 
 using System.Collections.Generic;
 using UnityEngine;
