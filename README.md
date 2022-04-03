@@ -11,6 +11,7 @@
   - [Common Settings](#common-settings)
   - [Quadral Settings](#quadral-settings)
   - [Hexagonal Settings](#hexagonal-settings)
+  - [Getting Grid Data](#getting-grid-data)
   - [Example 1](#example-1)
   - [Example 2](#example-2)
     
@@ -30,8 +31,6 @@ https://user-images.githubusercontent.com/59537269/161431652-703db589-e783-459e-
  - After that, In order for SimpleGrid to work, you need to attach a Grid Settings as shown below
 
 https://user-images.githubusercontent.com/59537269/161432041-4ecd2c31-9065-41ee-8f85-cb1b409853cb.mp4
-
-
  
 
 ## Grid Settings
@@ -45,6 +44,14 @@ https://user-images.githubusercontent.com/59537269/161432041-4ecd2c31-9065-41ee-
  - Height: The height of the grid
  - Width Offset: The width offset of the grid
  - Height Offset: The height offset of the grid
+
+## Getting Grid Data
+ - SimpleGrid does not only generate real/virtual grids, It also stores each individual grid object and calls them "Cell"
+ - You can access any Cell via GridManager by calling "cells[index].(cell-data)"
+ - Basically, Cell is nothing but a serializable C# class and looks like this
+  ![cell](https://user-images.githubusercontent.com/59537269/161443197-61e4fb60-0a13-4008-ade3-3c54455c2e5e.png)
+ - You can also extend Cell's data and use it as you wish
+
  
 ## Quadral Settings
 1 - Quadral Settings
