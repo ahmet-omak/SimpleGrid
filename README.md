@@ -45,13 +45,6 @@ https://user-images.githubusercontent.com/59537269/161432041-4ecd2c31-9065-41ee-
  - Width Offset: The width offset of the grid
  - Height Offset: The height offset of the grid
 
-## Getting Grid Data
- - SimpleGrid does not only generate real/virtual grids, It also stores each individual grid object and calls them "Cell"
- - You can access any Cell via GridManager by calling "cells[index].(cell-data)"
- - Basically, Cell is nothing but a serializable C# class and looks like this
-  ![cell](https://user-images.githubusercontent.com/59537269/161443197-61e4fb60-0a13-4008-ade3-3c54455c2e5e.png)
- - You can also extend Cell's data and use it as you wish
-
  
 ## Quadral Settings
 1 - Quadral Settings
@@ -80,6 +73,14 @@ https://user-images.githubusercontent.com/59537269/161432041-4ecd2c31-9065-41ee-
  - Hexagonal Offset: The hexagonal offset between grid objects
 
 ![Screen Shot 4-3-2022 at 5 27 PM](https://user-images.githubusercontent.com/59537269/161432832-9e40f30b-4cbd-4630-a787-60fce123936b.png)
+
+
+## Getting Grid Data
+ - SimpleGrid does not only generate real/virtual grids, It also stores each individual grid object and calls them "Cell"
+ - You can access any Cell via GridManager by calling "cells[index].(cell-data)"
+ - Basically, Cell is nothing but a serializable C# class and looks like this
+  ![cell](https://user-images.githubusercontent.com/59537269/161443197-61e4fb60-0a13-4008-ade3-3c54455c2e5e.png)
+ - You can also extend Cell's data and use it as you wish
 
 
 ## Example 1
