@@ -11,13 +11,13 @@
   - [Common Settings](#common-settings)
   - [Quadral Settings](#quadral-settings)
   - [Hexagonal Settings](#hexagonal-settings)
-  - [Header 3](#header-3)
-  - [Examples](#examples)
+  - [Example 1](#example-1)
+  - [Example 2](#example-2)
     
 </details>
 
 ## Introduction
-A simple SO (Scriptable Object) based grid creator for puzzle games
+Simple Scriptable Object based grid creator for puzzle games
 
     
 ## How to use
@@ -74,22 +74,38 @@ https://user-images.githubusercontent.com/59537269/161432041-4ecd2c31-9065-41ee-
 
 ![Screen Shot 4-3-2022 at 5 27 PM](https://user-images.githubusercontent.com/59537269/161432832-9e40f30b-4cbd-4630-a787-60fce123936b.png)
 
-## Header 3
-This is header 3
+
+## Example 1
+
+## Generate Grid Inside Simple Grid Object
+
+
+
+
+## Generate Grid From Another MonoBehaviour
+ - SimpleGrid allows you to initialize grid from another MonoBehaviour
+ - For example, If you want to use different grids for your levels you can make a list of grid settings and attach different grid data for each level like below
+
+## Example 2
 ```csharp 
-    public class ExampleClass    
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LevelManager : MonoBehaviour
+{
+    public GridManager gridManager;
+    public List<BaseGridSettings> gridSettings;
+    public int levelIndex;
+
+    private void Awake()
     {
-    
+        var currentGridSettings = gridSettings[levelIndex];
+        gridManager.InitGrid(currentGridSettings);
     }
+}
 ```
-## Examples
-Some examples
 
-
-
-
-
-
+![generate-grid-another-monobehaviour](https://user-images.githubusercontent.com/59537269/161442425-8bea0a01-4bc1-4006-8fc9-978618a8122c.png)
 
 
 
