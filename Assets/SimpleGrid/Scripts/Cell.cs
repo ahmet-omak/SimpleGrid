@@ -13,10 +13,10 @@ public class Cell
 
     }
 
-    public Cell(Vector3 worldPos, Vector2 gridPos, uint index)
+    public Cell(Vector3 worldPos, Vector2 gridPos, uint gridIndex)
     {
         this.worldPos = worldPos;
         this.gridPos = gridPos;
-        this.gridIndex = index;
+        this.gridIndex = gridIndex;
     }
 }
