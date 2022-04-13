@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0beebbf8bbfa1745be99261df29d0c3, type: 3}
-  m_Name: Hexagonal XY   Grid Settings
+  m_Name: Hexagonal XY  Grid Settings
   m_EditorClassIdentifier: 
   initialPos: {x: 0, y: 0, z: 0}
   width: 5
