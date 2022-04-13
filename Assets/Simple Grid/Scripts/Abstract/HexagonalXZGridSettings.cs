@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Simple Grid/Hexagonal XZ Grid Settings", fileName = "Hexagonal XZ Grid Settings", order = 2)]
@@ -13,6 +14,8 @@ public class HexagonalXZGridSettings : BaseGridSettings
 
         int index = 0;
 
+        Cells = new List<Cell>();
+
         for (int z = 0; z < Height; z++)
         {
             for (int x = 0; x < Width; x++)
@@ -21,6 +24,7 @@ public class HexagonalXZGridSettings : BaseGridSettings
                 var gridObj = Instantiate(GridPrefab, worldPos, Quaternion.identity);
                 gridObj.name = ChildName + $"{index}";
                 gridObj.transform.SetParent(gridParent.transform);
+                Cells.Add(new Cell(index, worldPos));
                 index++;
             }
         }

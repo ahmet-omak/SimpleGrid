@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Simple Grid/Quadral XY Grid Settings", fileName = "Quadral XY Grid Settings", order = 1)]
@@ -9,6 +10,8 @@ public class QuadralXYGridSettings : BaseGridSettings
 
         int index = 0;
 
+        Cells = new List<Cell>();
+
         for (int y = 0; y < Height; y++)
         {
             for (int x = 0; x < Width; x++)
@@ -17,6 +20,7 @@ public class QuadralXYGridSettings : BaseGridSettings
                 var gridObj = Instantiate(GridPrefab, worldPos, Quaternion.identity);
                 gridObj.name = ChildName + $"{index}";
                 gridObj.transform.SetParent(gridParent.transform);
+                Cells.Add(new Cell(index, worldPos));
                 index++;
             }
         }
