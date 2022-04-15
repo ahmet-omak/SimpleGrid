@@ -26,5 +26,31 @@ public abstract class BaseGridSettings : ScriptableObject
     public List<Cell> Cells { get => cells; protected set => cells = value; }
     public int Size { get => width * height; }
 
-    public abstract void InitGrid();
+    public abstract Vector3 GetGridPos(int w, float width, int h, float height);
+
+    public void InitGrid()
+    {
+        var gridParent = new GameObject(ParentName);
+
+        int index = 0;
+
+        Cells = new List<Cell>();
+
+        for (int h = 0; h < Height; h++)
+        {
+            for (int w = 0; w < Width; w++)
+            {
+                Vector3 worldPos = InitialPos + GetGridPos(w, widthOffset, h, heightOffset);
+
+                var grid = Instantiate(GridPrefab, worldPos, Quaternion.identity);
+                grid.SetText(index).SetName(ChildName + $"{index}").SetParent(gridParent.transform);
+
+                var cell = new Cell();
+                cell.SetIndex(index).SetWorldPos(worldPos);
+
+                Cells.Add(cell);
+                index++;
+            }
+        }
+    }
 }
