@@ -13,15 +13,18 @@ public abstract class BaseGridSettings : ScriptableObject
     [SerializeField, Space(5f)] string childName = "Cell";
     [SerializeField, Space(5f)] List<Cell> cells;
 
+    private int size;
+
     public Vector3 InitialPos { get => initialPos; }
     public int Width { get => width; }
     public int Height { get => height; }
     public float WidthOffset { get => widthOffset; }
     public float HeightOffset { get => heightOffset; }
-    public string ParentName { get => parentName; set => parentName = value; }
-    public string ChildName { get => childName; set => childName = value; }
-    public GameObject GridPrefab { get => gridPrefab; set => gridPrefab = value; }
+    public string ParentName { get => parentName; }
+    public string ChildName { get => childName; }
+    public GameObject GridPrefab { get => gridPrefab; }
     public List<Cell> Cells { get => cells; protected set => cells = value; }
+    public int Size { get => width * height; }
 
     public abstract void InitGrid();
 }
