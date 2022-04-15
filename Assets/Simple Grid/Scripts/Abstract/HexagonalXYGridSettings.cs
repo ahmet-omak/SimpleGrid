@@ -21,9 +21,8 @@ public class HexagonalXYGridSettings : BaseGridSettings
             for (int x = 0; x < Width; x++)
             {
                 Vector3 worldPos = InitialPos + new Vector3(x * WidthOffset + (y % 2 * hexagonalOffset), y * HeightOffset, 0f);
-                GameObject gridObj = Instantiate(GridPrefab, worldPos, Quaternion.identity);
-                gridObj.name = ChildName + $"{index}";
-                gridObj.transform.SetParent(gridParent.transform);
+                var grid = Instantiate(GridPrefab, worldPos, Quaternion.identity);
+                grid.SetText(index).SetName(ChildName + $"{index}").SetParent(gridParent.transform);
                 Cells.Add(new Cell(index, worldPos));
                 index++;
             }
