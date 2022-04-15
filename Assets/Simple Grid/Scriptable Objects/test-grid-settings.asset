@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225b8783a27e96841af6b7b483ee3fac, type: 3}
+  m_Name: test-grid-settings
+  m_EditorClassIdentifier: 
+  initialPos: {x: 0, y: 0, z: 0}
+  gridPrefab: {fileID: 1720440690769911165, guid: 437a8fd01eb918244b1fb83214a1d5bc, type: 3}
+  width: 5
+  height: 5
+  widthOffset: 2
+  heightOffset: 2
+  parentName: Grid
+  childName: Cell
+  cells:
+  - index: 0
+    worldPos: {x: 0, y: 0, z: 0}
+  - index: 1
+    worldPos: {x: 2, y: 0, z: 0}
+  - index: 2
+    worldPos: {x: 4, y: 0, z: 0}
+  - index: 3
+    worldPos: {x: 6, y: 0, z: 0}
+  - index: 4
+    worldPos: {x: 8, y: 0, z: 0}
+  - index: 5
+    worldPos: {x: 0, y: 0, z: 2}
+  - index: 6
+    worldPos: {x: 2, y: 0, z: 2}
+  - index: 7
+    worldPos: {x: 4, y: 0, z: 2}
+  - index: 8
+    worldPos: {x: 6, y: 0, z: 2}
+  - index: 9
+    worldPos: {x: 8, y: 0, z: 2}
+  - index: 10
+    worldPos: {x: 0, y: 0, z: 4}
+  - index: 11
+    worldPos: {x: 2, y: 0, z: 4}
+  - index: 12
+    worldPos: {x: 4, y: 0, z: 4}
+  - index: 13
+    worldPos: {x: 6, y: 0, z: 4}
+  - index: 14
+    worldPos: {x: 8, y: 0, z: 4}
+  - index: 15
+    worldPos: {x: 0, y: 0, z: 6}
+  - index: 16
+    worldPos: {x: 2, y: 0, z: 6}
+  - index: 17
+    worldPos: {x: 4, y: 0, z: 6}
+  - index: 18
+    worldPos: {x: 6, y: 0, z: 6}
+  - index: 19
+    worldPos: {x: 8, y: 0, z: 6}
+  - index: 20
+    worldPos: {x: 0, y: 0, z: 8}
+  - index: 21
+    worldPos: {x: 2, y: 0, z: 8}
+  - index: 22
+    worldPos: {x: 4, y: 0, z: 8}
+  - index: 23
+    worldPos: {x: 6, y: 0, z: 8}
+  - index: 24
+    worldPos: {x: 8, y: 0, z: 8}
