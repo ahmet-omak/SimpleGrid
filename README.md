@@ -13,7 +13,7 @@
   - [Hexagonal Settings](#hexagonal-settings)
   - [Creating Grid](#how-to-create-a-grid)
   - [Getting Data](#getting-data)
-  - [Extendint SimpleGrid](#how-to-extend)
+  - [Extending SimpleGrid](#how-to-extend)
     
 </details>
 
