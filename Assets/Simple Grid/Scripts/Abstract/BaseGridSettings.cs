@@ -41,12 +41,13 @@ public abstract class BaseGridSettings : ScriptableObject
             for (int w = 0; w < Width; w++)
             {
                 Vector3 worldPos = InitialPos + GetGridPos(w, widthOffset, h, heightOffset);
+                Vector2 gridPos = new Vector2(w, h);
 
                 var grid = Instantiate(GridPrefab, worldPos, Quaternion.identity);
                 grid.SetText(index).SetName(ChildName + $"{index}").SetParent(gridParent.transform);
 
                 var cell = new Cell();
-                cell.SetIndex(index).SetWorldPos(worldPos);
+                cell.SetIndex(index).SetWorldPos(worldPos).SetGridPos(gridPos);
 
                 Cells.Add(cell);
                 index++;

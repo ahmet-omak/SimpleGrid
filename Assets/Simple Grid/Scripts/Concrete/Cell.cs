@@ -6,6 +6,7 @@ public class Cell
 {
     public int index;
     public Vector3 worldPos;
+    public Vector2 gridPos;
 
     public Cell SetIndex(int index)
     {
@@ -16,6 +17,12 @@ public class Cell
     public Cell SetWorldPos(Vector3 worldPos)
     {
         this.worldPos = worldPos;
+        return this;
+    }
+
+    public Cell SetGridPos(Vector2 gridPos)
+    {
+        this.gridPos = gridPos;
         return this;
     }
 }
