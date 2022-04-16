@@ -6,8 +6,8 @@ public static class SimpleGridMenu
     [MenuItem("Window/Simple Grid/Create SimpleGrid Object", false, 200)]
     public static void AddSimpleGridObject()
     {
-        var asset = (BaseGridSettings)AssetDatabase.LoadAssetAtPath(WhereIs("test-grid-settings"), typeof(BaseGridSettings));
-        asset.Create();
+        var grid = (BaseGridSettings)AssetDatabase.LoadAssetAtPath(WhereIs("test-grid-settings"), typeof(BaseGridSettings));
+        grid.Create();
     }
 
     private static string WhereIs(string fileName)
