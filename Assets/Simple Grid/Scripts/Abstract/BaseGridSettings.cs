@@ -40,6 +40,7 @@ public abstract class BaseGridSettings : ScriptableObject
                 Vector3 worldPos = InitialPos + GetPos(w, widthOffset, h, heightOffset);
 
                 var grid = Instantiate(gridPrefab, worldPos, Quaternion.identity, gridParent.transform);
+                grid.GetComponent<CellController>().SetText(index);
 
                 var cell = new Cell();
                 cell.SetIndex(index).SetWorldPos(worldPos);
