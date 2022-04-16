@@ -7,8 +7,8 @@ public class HexagonalGridSettings : BaseGridSettings
 
     public float HexagonalOffset { get => hexagonalOffset; }
 
-    protected override Vector3 MapToGridPlane(int w, float width, int h, float height)
+    protected override Vector3 GetPos(int w, float width, int h, float height)
     {
-        return new Vector3(w * width + (h % 2 * hexagonalOffset), h * height, h * height);
+        return new Vector3(w * width + (h % 2 * hexagonalOffset), 0f, h * height);
     }
 }
