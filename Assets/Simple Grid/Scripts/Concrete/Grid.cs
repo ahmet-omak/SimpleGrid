@@ -1,12 +1,12 @@
 using UnityEngine;
-using TMPro;
+
 public class Grid : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI textMeshPro;
+    [SerializeField] GridCanvas gridCanvas;
 
     public Grid SetText(int count)
     {
-        textMeshPro.text = count.ToString();
+        gridCanvas.TextMesh.text = count.ToString();
         return this;
     }
 
@@ -19,6 +19,12 @@ public class Grid : MonoBehaviour
     public Grid SetParent(Transform parent)
     {
         transform.SetParent(parent);
+        return this;
+    }
+
+    public Grid SetCanvasRotation(Vector3 rot)
+    {
+        gridCanvas.transform.localRotation = Quaternion.Euler(rot);
         return this;
     }
 }
