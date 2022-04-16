@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class SimpleGridMenu
 {
-    [MenuItem("Window/Simple Grid/Create SimpleGrid Object", false, 200)]
+    [MenuItem("Window/Simple Grid/Create Grid", false, 200)]
     public static void AddSimpleGridObject()
     {
         var grid = (BaseGridSettings)AssetDatabase.LoadAssetAtPath(WhereIs("test-grid-settings"), typeof(BaseGridSettings));
