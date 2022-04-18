@@ -13,7 +13,7 @@
   - [Hexagonal Settings](#hexagonal-settings)
   - [Creating Grid](#how-to-create-a-grid)
   - [Getting Data](#getting-data)
-  - [Extending SimpleGrid](#how-to-extend)
+  - [Extending SimpleGrid](#extending-simplegrid)
     
 </details>
 
@@ -74,6 +74,8 @@ public class LevelManager : MonoBehaviour
     }
 }
 ```
+
+## Extending SimpleGrid
 
  - You can also extend cells data by just making a data inside Cell class and bind it in "Create" method like shown below.
 
