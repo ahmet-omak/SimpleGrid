@@ -2,29 +2,32 @@
 using UnityEditor;
 using UnityEngine;
 
-public static class SimpleGridMenu
+namespace CPPBENDER.SimpleGrid
 {
-    [MenuItem("Window/Simple Grid/Create a test grid", false, 200)]
-    public static void AddSimpleGridObject()
+    public static class SimpleGridMenu
     {
-        var grid = (BaseGrid)AssetDatabase.LoadAssetAtPath(WhereIs("Test Grid"), typeof(BaseGrid));
-        grid.Create();
-    }
-
-    private static string WhereIs(string fileName)
-    {
-        string[] guids = AssetDatabase.FindAssets(fileName);
-
-        foreach (string guid in guids)
+        [MenuItem("Window/Simple Grid/Create a test grid", false, 200)]
+        public static void AddSimpleGridObject()
         {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            if (path.EndsWith(".asset"))
-            {
-                return path;
-            }
+            var grid = (BaseGrid)AssetDatabase.LoadAssetAtPath(WhereIs("Test Grid"), typeof(BaseGrid));
+            grid.Create();
         }
-        Debug.Log("Could not find the asset");
-        return "";
+
+        private static string WhereIs(string fileName)
+        {
+            string[] guids = AssetDatabase.FindAssets(fileName);
+
+            foreach (string guid in guids)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                if (path.EndsWith(".asset"))
+                {
+                    return path;
+                }
+            }
+            Debug.Log("Could not find the asset");
+            return "";
+        }
     }
-}
 #endif
+}

@@ -1,12 +1,9 @@
 using UnityEngine;
-using TMPro;
 
-public class CellController : MonoBehaviour
+namespace CPPBENDER.SimpleGrid
 {
-    [SerializeField] TextMeshProUGUI textMesh;
-
-    public void SetText(int text)
+    public class CellController : MonoBehaviour
     {
-        textMesh.text = text.ToString();
+
     }
 }
