@@ -74,9 +74,3 @@ public class LevelManager : MonoBehaviour
     }
 }
 ```
-
-## Extending SimpleGrid
-
- - You can also extend cells data by just making a data inside Cell class and bind it in "Create" method like shown below.
-
-https://user-images.githubusercontent.com/59537269/163682411-ebbc8fe2-2755-4f41-a842-6bfa963eaba2.mp4
