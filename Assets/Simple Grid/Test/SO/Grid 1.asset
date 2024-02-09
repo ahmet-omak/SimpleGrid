@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43c76d10e37cc7f4aa6608fb2061d327, type: 3}
-  m_Name: Hexagonal Grid
+  m_Name: Grid 1
   m_EditorClassIdentifier: 
-  initialPos: {x: 1, y: 0, z: 0}
-  gridPrefab: {fileID: 1720440690769911165, guid: 437a8fd01eb918244b1fb83214a1d5bc, type: 3}
+  initialPos: {x: 4, y: 0, z: 0}
+  gridPrefab: {fileID: 3093906571462186674, guid: eaba9a8b390c54844a6e972958a91fa3, type: 3}
   width: 5
   height: 5
-  widthOffset: 2
-  heightOffset: 2
+  widthOffset: 1.25
+  heightOffset: 1.25
   parentName: Grid
   childName: Cell
   hexagonalOffset: 1

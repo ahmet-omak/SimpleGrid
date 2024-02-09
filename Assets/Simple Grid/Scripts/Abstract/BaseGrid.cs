@@ -37,7 +37,7 @@ namespace CPPBENDER.SimpleGrid
                 for (int w = 0; w < Width; w++)
                 {
                     Vector3 worldPos = InitialPos + GetPos(w, widthOffset, h, heightOffset);
-                    Instantiate(gridPrefab, worldPos, Quaternion.identity, gridParent.transform);
+                    Instantiate(gridPrefab, worldPos, gridPrefab.transform.rotation, gridParent.transform);
                     var cell = new Cell();
                     cell.SetIndex(index).SetWorldPos(worldPos).SetGridPos(new Vector2(w, h));
                     Cells.Add(cell);
