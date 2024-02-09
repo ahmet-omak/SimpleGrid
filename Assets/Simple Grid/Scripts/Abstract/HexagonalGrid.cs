@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Simple Grid/Hexagonal Grid Settings", fileName = "Hexagonal Grid Settings", order = 1)]
-public class HexagonalGridSettings : BaseGridSettings
+[CreateAssetMenu(menuName = "Simple Grid/Hexagonal Grid", fileName = "Hexagonal Grid", order = 1)]
+public class HexagonalGrid : BaseGrid
 {
     [SerializeField, Space(5f)] float hexagonalOffset = 1f;
 

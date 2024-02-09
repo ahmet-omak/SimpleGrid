@@ -1,12 +1,13 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
 public static class SimpleGridMenu
 {
-    [MenuItem("Window/Simple Grid/Create Grid", false, 200)]
+    [MenuItem("Window/Simple Grid/Create a test grid", false, 200)]
     public static void AddSimpleGridObject()
     {
-        var grid = (BaseGridSettings)AssetDatabase.LoadAssetAtPath(WhereIs("test-grid-settings"), typeof(BaseGridSettings));
+        var grid = (BaseGrid)AssetDatabase.LoadAssetAtPath(WhereIs("Test Grid"), typeof(BaseGrid));
         grid.Create();
     }
 
@@ -26,3 +27,4 @@ public static class SimpleGridMenu
         return "";
     }
 }
+#endif

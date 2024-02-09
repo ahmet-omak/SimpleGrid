@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseGridSettings : ScriptableObject
+public abstract class BaseGrid : ScriptableObject
 {
     [SerializeField, Space(5f)] Vector3 initialPos = Vector3.zero;
     [SerializeField, Space(5f)] GameObject gridPrefab = null;
@@ -28,11 +28,8 @@ public abstract class BaseGridSettings : ScriptableObject
     public void Create()
     {
         var gridParent = new GameObject(parentName);
-
         int index = 0;
-
         Cells = new List<Cell>();
-
         for (int h = 0; h < Height; h++)
         {
             for (int w = 0; w < Width; w++)
@@ -43,7 +40,7 @@ public abstract class BaseGridSettings : ScriptableObject
                 grid.GetComponent<CellController>().SetText(index);
 
                 var cell = new Cell();
-                cell.SetIndex(index).SetWorldPos(worldPos);
+                cell.SetIndex(index).SetWorldPos(worldPos).SetGridPos(new Vector2(w, h));
 
                 Cells.Add(cell);
                 index++;
