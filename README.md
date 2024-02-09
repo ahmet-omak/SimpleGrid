@@ -41,7 +41,8 @@ I am gonna explain how to create a grid in later parts. But, if you want to have
 ## Quadral Settings
 1 - Quadral Settings 
 
-![quadral-grid-settings](https://user-images.githubusercontent.com/59537269/163680889-0963042b-ed62-4940-9d2a-313c630ea461.png)
+![quadral grid](https://github.com/cpp-bender/SimpleGrid/assets/59537269/3d12f62d-2aa2-4881-9386-fe8e82c75dfb)
+
 
 
 ## Hexagonal Settings
@@ -49,7 +50,8 @@ I am gonna explain how to create a grid in later parts. But, if you want to have
 
  - Hexagonal Offset: The hexagonal offset between grid objects
  
-![hexagonal-grid-settings](https://user-images.githubusercontent.com/59537269/163680980-928c412f-b87f-4f9e-889f-3bc0e8f07944.png)
+![hexagonal grid](https://github.com/cpp-bender/SimpleGrid/assets/59537269/37ee88ed-6609-4eab-a259-6f2a28055e14)
+
 
 ## How to create a grid
 https://user-images.githubusercontent.com/59537269/163681571-8ca3e6a5-587a-4e03-8e1e-ca9f6e6a0ba3.mp4
@@ -74,9 +76,3 @@ public class LevelManager : MonoBehaviour
     }
 }
 ```
-
-## Extending SimpleGrid
-
- - You can also extend cells data by just making a data inside Cell class and bind it in "Create" method like shown below.
-
-https://user-images.githubusercontent.com/59537269/163682411-ebbc8fe2-2755-4f41-a842-6bfa963eaba2.mp4
